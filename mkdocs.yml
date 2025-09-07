@@ -1,0 +1,71 @@
+site_name: RootFramework
+# site_url: https://vitalfocheux.github.io
+# repo_url: https://github.com/vitalfocheux/vitalfocheux.github.io
+# repo_name: GitHub
+
+# mkdocs serve -> lancer le serveur local
+
+theme:
+  name: material
+  # logo: images/logo.png
+  # favicon: images/favicon.png
+  # language: fr
+  features:
+    - navigation.instant        # chargement rapide AJAX
+    - navigation.tabs           # onglets de navigation en haut
+    - navigation.expand         # expand/collapse dans la sidebar
+    - navigation.sections       # sections bien séparées
+    - navigation.indexes        # pages index automatiques
+    - toc.integrate             # sommaire intégré à gauche
+    - content.code.copy         # bouton "copier" sur les blocs de code
+    - content.action.edit       # bouton "éditer cette page"
+    - search.suggest            # suggestions de recherche
+    - search.highlight          # surlignage des résultats
+    - header.autohide           # header disparaît au scroll
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: Passer en mode sombre
+    - scheme: slate
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/weather-sunny
+        name: Passer en mode clair
+  font:
+    text: Roboto
+    code: Fira Code
+
+# plugins:
+#   - search
+#   - i18n:
+#       docs_structure: folder  # utilisation des dossiers fr/ et en/
+#       languages:
+#         - locale: fr
+#           name: Français
+#           default: true
+#           build: true
+#         - locale: en
+#           name: English
+#           build: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.inlinehilite
+
+
+nav:
+  - Accueil: index.md
+  # - Guide:
+  #   - Installation: guide/installation.md
+  #   - Premier pas: guide/premiers_pas.md
+  # - API:
+  #   - Scripting: api/scripting.md
+  #   - Rendu : api/rendu.md
+  # - FAQ: faq.md
